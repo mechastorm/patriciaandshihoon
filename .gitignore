@@ -4,6 +4,10 @@ _site
 assets-tmp
 www
 
+# Terraform
+*.tfplan
+.terraform
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
