@@ -15,8 +15,8 @@
   <meta property="og:site_name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:image" itemprop="image" content="http://patriciaandshihoon.com/images/meta_banner.jpg">
-  <meta property="og:image:secure_url" itemprop="image" content="https://patriciaandshihoon.com/images/meta_banner.jpg">
+  <meta property="og:image" itemprop="image" content="http://patriciaandshihoon.com/images/meta_og_banner.jpg">
+  <meta property="og:image:secure_url" itemprop="image" content="https://patriciaandshihoon.com/images/meta_og_banner.jpg">
   <meta property="og:type" content="website" />
   <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
