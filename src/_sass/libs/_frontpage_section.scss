@@ -28,19 +28,19 @@
     margin-top: 20px;
   }
 
-  img.profile-img {
-    display: block;
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
+  div.profile-img {
     text-align: center;
-    margin: 0 15%;
+    img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      text-align: center;
+    }
   }
 
   div.inner.profile-bridegroom {
-    top: 0px;
-
-    h2 {
+    width: 15%;
+    h3 {
       font-family: _font_banner(family);
       font-size: 3.5em;
       font-weight: 100;
