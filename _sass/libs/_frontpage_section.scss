@@ -5,7 +5,47 @@
 #event-details {
   div.inner {
     display: inline-block;
-    margin: 0em 0.2em;
+    margin: 0em 0em;
     width: 20%;
+    vertical-align:top;
+  }
+
+  div.inner.event-info {
+    p {
+      margin: 0 0 0.5em 0;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+
+    .event-location p {
+      font-size: 0.8em;
+      line-height: 1.3em;
+    }
+  }
+
+  .button.special {
+    background-color: _palette(bg);
+    margin-top: 20px;
+  }
+
+  img.profile-img {
+    display: block;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 0 15%;
+  }
+
+  div.inner.profile-bridegroom {
+    top: 0px;
+
+    h2 {
+      font-family: _font_banner(family);
+      font-size: 3.5em;
+      font-weight: 100;
+      letter-spacing: 0;
+      text-transform: none;
+    }
   }
 }
