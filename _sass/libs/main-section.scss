@@ -1,0 +1,62 @@
+.main-section, #main {
+  > header {
+    @include padding(12em, 0);
+    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    h2 {
+      // font-size: 1.75em;
+      margin: 0 0 (_size(element-margin) * 0.25) 0;
+
+      font-family: _font_banner(family);
+      font-size: 4.5em;
+      font-weight: 100;
+      letter-spacing: 0.2em;
+      text-transform: none;
+    }
+
+    p {
+      color: inherit;
+      letter-spacing: _size(letter-spacing-alt);
+      text-transform: uppercase;
+      top: 0;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      @include padding(10em, 0);
+    }
+
+    @include breakpoint(large) {
+      @include padding(8em, 3em);
+    }
+
+    @include breakpoint(medium) {
+      @include padding(10em, 3em);
+    }
+
+    @include breakpoint(small) {
+      @include padding(5em, 3em);
+
+      h2 {
+        font-size: 1.25em;
+        margin: 0 0 (_size(element-margin) * 0.5) 0;
+      }
+    }
+  }
+}
+
+body.is-mobile {
+  .main-section, #main {
+    > header {
+      background-attachment: scroll;
+    }
+  }
+}
