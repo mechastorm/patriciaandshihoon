@@ -1,15 +1,16 @@
 resource "aws_cloudfront_origin_access_identity" "site" {
-  comment = "${local.domain}"
+  comment = "${local.domain}.s3-website-${local.region}.amazonaws.com"
 }
 
 resource "aws_cloudfront_distribution" "site" {
   origin {
-    domain_name = "${aws_s3_bucket.site.bucket_domain_name}"
+    domain_name = "${local.domain}.s3-website-${local.region}.amazonaws.com"
+    // domain_name = "${aws_s3_bucket.site.bucket_domain_name}"
     origin_id   = "${local.domain}_bucket"
 
-    s3_origin_config {
-      origin_access_identity = "origin-access-identity/cloudfront/${aws_cloudfront_origin_access_identity.site.id}"
-    }
+    // s3_origin_config {
+    //   origin_access_identity = "origin-access-identity/cloudfront/${aws_cloudfront_origin_access_identity.site.id}"
+    // }
   }
 
   enabled             = true
@@ -38,10 +39,10 @@ resource "aws_cloudfront_distribution" "site" {
       }
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
-    default_ttl            = 3
-    max_ttl                = 5
+    default_ttl            = 0
+    max_ttl                = 3
   }
 
   price_class = "PriceClass_200"
