@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1
+  - 2.2
 install: gem install ruby_dep -v 1.3.1 && gem install jekyll -v 3.6.2 && gem install s3_website
 script: jekyll build --source src --destination www
 after_success: s3_website push
