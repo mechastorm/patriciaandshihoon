@@ -211,7 +211,10 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 /* Section/Article */
-
+	.event-date, .event-location {
+		margin-bottom: 20px;
+	}
+	
 	section, article {
 		&.special {
 			text-align: center;
@@ -1484,6 +1487,17 @@ $baseurl: '{{ site.baseurl }}/images';
 /* CTA */
 
 	#cta {
+		@include vendor('background-image', ('linear-gradient(top, rgba(22,27,67,0.8), rgba(22,27,67,0.7) )', 'url("#{$baseurl}/banner.jpg")'));
+		
+		h2, a {
+			color: #CFB53B
+		}
+
+		a {
+			padding: 12px;
+			border: 2px solid;
+		}
+
 		.inner {
 			@include vendor('display', 'flex');
 			max-width: 45em;
