@@ -22,6 +22,29 @@ EOF
   website {
       index_document = "index.html"
       error_document = "404.html"
+
+      routing_rules = <<EOF
+[
+  {
+    "Condition": {
+        "KeyPrefixEquals": "photos"
+    },
+    "Redirect": {
+        "HostName": "cakewalk.pixieset.com",
+        "ReplaceKeyPrefixWith": "g/patriciaandshihoonwedding"
+    }
+  },
+  {
+    "Condition": {
+        "KeyPrefixEquals": "photobooth"
+    },
+    "Redirect": {
+        "HostName": "vikaash.pixieset.com",
+        "ReplaceKeyPrefixWith": "g/guestlogin/patriciaandshihoon"
+    }
+  }
+]
+EOF
   }
 
   tags {
